@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019/12 | Hexo</title>
+  <title>svg flag | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2019/12/index.html">
+  <meta name="description" content="公司需要一个渐变弧形进度条来展示数据进度。在网上左拼右凑补充知识…选择了用svg来实现。">
+<meta name="keywords" content="svg">
+<meta property="og:type" content="article">
+<meta property="og:title" content="svg flag">
+<meta property="og:url" content="http://yoursite.com/2020/03/30/svg-flag/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="公司需要一个渐变弧形进度条来展示数据进度。在网上左拼右凑补充知识…选择了用svg来实现。">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-03-30T09:26:26.405Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="svg flag">
+<meta name="twitter:description" content="公司需要一个渐变弧形进度条来展示数据进度。在网上左拼右凑补充知识…选择了用svg来实现。">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -144,71 +149,185 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-svg-flag" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/10/page20191210/" class="archive-article-date">
-  	<time datetime="2019-12-10T06:45:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-10</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/10/page20191210/">ios中iframe嵌套单页面出现白屏问题</a>
+    <h1 class="article-title" itemprop="name">
+      svg flag
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2020/03/30/svg-flag/" class="archive-article-date">
+  	<time datetime="2020-03-30T09:07:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>公司需要一个渐变弧形进度条来展示数据进度。<br>在网上左拼右凑补充知识…<br>选择了用svg来实现。</p>
+<a id="more"></a>
+
+<p>具体实现方式如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;div class=<span class="string">"progress-wrap"</span>&gt;</span><br><span class="line">        &lt;svg class=<span class="string">"my-svg"</span> :width=<span class="string">"width"</span> :height=<span class="string">"width"</span> xmlns=<span class="string">"http://www.w3.org/2000/svg"</span>&gt;</span><br><span class="line">            &lt;defs&gt;</span><br><span class="line">                &lt;linearGradient id=<span class="string">"linear"</span> x1=<span class="string">"0%"</span> y1=<span class="string">"0%"</span> x2=<span class="string">"100%"</span> y2=<span class="string">"0%"</span>&gt; </span><br><span class="line">                    &lt;stop offset=<span class="string">"0%"</span> stop-color=<span class="string">"#57e4b9"</span>/&gt; </span><br><span class="line">					&lt;stop offset=<span class="string">"100%"</span> stop-color=<span class="string">"#3daff8"</span>/&gt; </span><br><span class="line">				&lt;/linearGradient&gt;</span><br><span class="line">            &lt;/defs&gt;</span><br><span class="line">            &lt;circle :r=<span class="string">"(width-radius)/2"</span></span><br><span class="line">                :cy=<span class="string">"width/2"</span></span><br><span class="line">                :cx=<span class="string">"width/2"</span></span><br><span class="line">                :stroke-width=<span class="string">"radius"</span></span><br><span class="line">                stroke=<span class="string">"#085c81"</span></span><br><span class="line">                :stroke-linecap=<span class="string">"isRound ? 'round' : 'square'"</span></span><br><span class="line">                :stroke-dasharray=<span class="string">"(width-radius)*3.14"</span></span><br><span class="line">                :stroke-dashoffset=<span class="string">"(width - radius) * 3.14 * 25/ 100"</span></span><br><span class="line">                fill=<span class="string">"none"</span></span><br><span class="line">                :style=<span class="string">"deflationAns"</span></span><br><span class="line">            /&gt;</span><br><span class="line">            &lt;circle ref=<span class="string">"<span class="variable">$bar</span>"</span></span><br><span class="line">                :r=<span class="string">"(width-radius)/2"</span></span><br><span class="line">                :cy=<span class="string">"width/2"</span></span><br><span class="line">                :cx=<span class="string">"width/2"</span></span><br><span class="line">                stroke=<span class="string">"url(#linear)"</span></span><br><span class="line">                :stroke-width=<span class="string">"radius"</span></span><br><span class="line">                :stroke-linecap=<span class="string">"isRound ? 'round' : 'square'"</span></span><br><span class="line">                :stroke-dasharray=<span class="string">"(width-radius)*3.14"</span></span><br><span class="line">                :stroke-dashoffset=<span class="string">"isAnimation ? (width-radius) * 3.14 : (width - radius) * 3.14 * (100 - progress*.75) / 100"</span></span><br><span class="line">                fill=<span class="string">"none"</span></span><br><span class="line">                :style=<span class="string">"deflationAns"</span></span><br><span class="line">            /&gt;</span><br><span class="line">            &lt;circle</span><br><span class="line">                :cx=<span class="string">"width/2"</span> </span><br><span class="line">                :cy=<span class="string">"width/2*.06"</span></span><br><span class="line">                :style=<span class="string">"iconCircle"</span> r=<span class="string">"14"</span> fill=<span class="string">"#016895"</span> :stroke=<span class="string">"iconColor"</span> stroke-width=<span class="string">"3"</span> </span><br><span class="line">                :stroke-dasharray=<span class="string">"28*3.14"</span></span><br><span class="line">            &gt;</span><br><span class="line">                &lt;animate attributeName=<span class="string">"stroke-dashoffset"</span> :from=<span class="string">"28*3.14"</span> to=<span class="string">"0"</span> dur=<span class="string">"1s"</span> :begin=<span class="string">'`$&#123;(duration+1)/1000&#125;s`'</span> v-if=<span class="string">"progress == 100 &amp;&amp; isAnimation"</span>/&gt;</span><br><span class="line">            &lt;/circle&gt;</span><br><span class="line">        &lt;/svg&gt;</span><br><span class="line">        &lt;a-icon <span class="built_in">type</span>=<span class="string">"trophy"</span> theme=<span class="string">'filled'</span> :style=<span class="string">"&#123;'color':iconColor,'top':width*4/5+'px','left': width*4/5+'px'&#125;"</span> class=<span class="string">"trophy-icon"</span> /&gt;</span><br><span class="line">        &lt;div class=<span class="string">"finish-progress-text"</span>&gt;</span><br><span class="line">            &lt;p&gt;已完成小节&lt;/p&gt;</span><br><span class="line">            &lt;slot name=<span class="string">"scale"</span>&gt;&lt;/slot&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;div class=<span class="string">"comment-btn"</span> @click=<span class="string">"reComment"</span>&gt;</span><br><span class="line">            &lt;a-rate v-model=<span class="string">"scoreNum"</span> allowHalf class=<span class="string">"star-wrap"</span> disabled/&gt;</span><br><span class="line">            &lt;span&gt;&#123;&#123; userComment ? <span class="string">'已评价'</span> : <span class="string">'未评价'</span>&#125;&#125;&lt;/span&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">import &#123; mapMutations &#125; from <span class="string">'vuex'</span></span><br><span class="line">import &#123; examServer &#125; from <span class="string">'@/servers/examServer'</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> default &#123;</span><br><span class="line">    props: &#123;</span><br><span class="line">        width: &#123;</span><br><span class="line">            <span class="built_in">type</span>: Number,</span><br><span class="line">            default: 220</span><br><span class="line">        &#125;,</span><br><span class="line">        isRound: &#123; // 是否是圆形画笔</span><br><span class="line">            <span class="built_in">type</span>: Boolean,</span><br><span class="line">            default: <span class="literal">true</span>,</span><br><span class="line">        &#125;,</span><br><span class="line">        progress: &#123;</span><br><span class="line">            <span class="built_in">type</span>: [String, Number],</span><br><span class="line">            default: 100</span><br><span class="line">        &#125;, // 进度条百分比</span><br><span class="line">        radius: &#123;</span><br><span class="line">            <span class="built_in">type</span>: [String, Number],</span><br><span class="line">            default: 4</span><br><span class="line">        &#125;, // 进度条厚度</span><br><span class="line">        isAnimation: &#123; // 是否是动画效果</span><br><span class="line">            <span class="built_in">type</span>: Boolean,</span><br><span class="line">            default: <span class="literal">true</span>,</span><br><span class="line">        &#125;,</span><br><span class="line">        id: &#123; // 组件的id，多组件共存时使用</span><br><span class="line">            <span class="built_in">type</span>: [String, Number],</span><br><span class="line">            default: 1,</span><br><span class="line">        &#125;,</span><br><span class="line">        duration: &#123; // 整个动画时长</span><br><span class="line">            <span class="built_in">type</span>: [String, Number],</span><br><span class="line">            default: 1000,</span><br><span class="line">        &#125;,</span><br><span class="line">        delay: &#123; // 延迟多久执行</span><br><span class="line">            <span class="built_in">type</span>: [String, Number],</span><br><span class="line">            default: 200,</span><br><span class="line">        &#125;,</span><br><span class="line">        timeFunction: &#123; // 动画缓动函数</span><br><span class="line">            <span class="built_in">type</span>: String,</span><br><span class="line">            default: <span class="string">'cubic-bezier(0.99, 0.01, 0.22, 0.94)'</span>,</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">    computed: &#123;</span><br><span class="line">        <span class="function"><span class="title">deflationAns</span></span>() &#123;</span><br><span class="line">            <span class="built_in">return</span> &#123;</span><br><span class="line">                <span class="string">'transform-origin'</span>: `<span class="variable">$&#123;this.width/2&#125;</span>px <span class="variable">$&#123;this.width/2&#125;</span>px`,</span><br><span class="line">                <span class="string">'transform'</span>: <span class="string">'scale(.9)'</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="function"><span class="title">iconCircle</span></span> () &#123;</span><br><span class="line">            <span class="built_in">return</span> &#123;</span><br><span class="line">                <span class="string">'transform-origin'</span>: `<span class="variable">$&#123;this.width/2&#125;</span>px <span class="variable">$&#123;this.width/2&#125;</span>px`,</span><br><span class="line">                <span class="string">'transform'</span>: <span class="string">'scale(.9)'</span>,</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        // 图标颜色</span><br><span class="line">        <span class="function"><span class="title">iconColor</span></span> () &#123;</span><br><span class="line">            <span class="keyword">if</span> (this.progress == 100) &#123;</span><br><span class="line">                <span class="keyword">if</span> (this.isAnimation) &#123;</span><br><span class="line">                    <span class="built_in">return</span> this.animateState ? <span class="string">'#085c81'</span> : <span class="string">'#57e4b9'</span></span><br><span class="line">                &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                    <span class="built_in">return</span> <span class="string">'#57e4b9'</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="built_in">return</span> <span class="string">'#085c81'</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        // 评论</span><br><span class="line">        <span class="function"><span class="title">userComment</span></span> () &#123;</span><br><span class="line">            <span class="built_in">return</span> this.<span class="variable">$store</span>.state.studyState.commentData</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="function"><span class="title">scoreNum</span></span> () &#123;</span><br><span class="line">            <span class="built_in">let</span> comment = this.<span class="variable">$store</span>.state.studyState.commentData</span><br><span class="line">            <span class="built_in">return</span> comment ? comment.score/2 : 0</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="function"><span class="title">data</span></span> () &#123;</span><br><span class="line">        <span class="built_in">return</span> &#123;</span><br><span class="line">            idStr: `circle_progress_keyframes_<span class="variable">$&#123;this.id&#125;</span>`,</span><br><span class="line">            // 进度条动画</span><br><span class="line">            animateState: <span class="literal">true</span>,</span><br><span class="line">            timerNum: 0,</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="function"><span class="title">beforeDestroy</span></span>() &#123;</span><br><span class="line">        // 清除旧组件的样式标签</span><br><span class="line">        document.getElementById(this.idStr) &amp;&amp; document.getElementById(this.idStr).remove()</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="function"><span class="title">mounted</span></span>() &#123;</span><br><span class="line">        <span class="keyword">if</span> (this.isAnimation) &#123;</span><br><span class="line">            // 重复定义判断</span><br><span class="line">            <span class="keyword">if</span> (document.getElementById(this.idStr)) &#123;</span><br><span class="line">                document.getElementById(this.idStr).remove()</span><br><span class="line">            &#125;</span><br><span class="line">            // 圆圈图标旋转角度</span><br><span class="line">            <span class="built_in">let</span> degConversion = this.progress*2.7;</span><br><span class="line">            // 生成动画样式文件</span><br><span class="line">            <span class="built_in">let</span> style = document.createElement(<span class="string">'style'</span>)</span><br><span class="line">            style.id = this.idStr</span><br><span class="line">            style.type = <span class="string">'text/css'</span></span><br><span class="line">            style.innerHTML = `</span><br><span class="line">            @keyframes circle_progress_keyframes_name_<span class="variable">$&#123;this.id&#125;</span> &#123;</span><br><span class="line">            from &#123;stroke-dashoffset: <span class="variable">$&#123;(this.width - this.radius) * 3.14&#125;</span>px;&#125;</span><br><span class="line">            to &#123;stroke-dashoffset: <span class="variable">$&#123;(this.width - this.radius) * 3.14 * (100 - this.progress*.75) / 100&#125;</span>px;&#125;&#125;</span><br><span class="line">            .circle_progress_bar<span class="variable">$&#123;this.id&#125;</span> &#123;animation: circle_progress_keyframes_name_<span class="variable">$&#123;this.id&#125;</span> <span class="variable">$&#123;this.duration&#125;</span>ms <span class="variable">$&#123;this.delay&#125;</span>ms <span class="variable">$&#123;this.timeFunction&#125;</span> forwards;&#125;`</span><br><span class="line">            // 添加新样式文件</span><br><span class="line">            document.getElementsByTagName(<span class="string">'head'</span>)[0].appendChild(style)</span><br><span class="line">            // 往svg元素中添加动画class</span><br><span class="line">            this.<span class="variable">$refs</span>.<span class="variable">$bar</span>.classList.add(`circle_progress_bar<span class="variable">$&#123;this.id&#125;</span>`)</span><br><span class="line"></span><br><span class="line">            this.timerFun()</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;,</span><br><span class="line">    methods: &#123;</span><br><span class="line">        ...mapMutations([</span><br><span class="line">            <span class="string">'setLeftMenuActive'</span></span><br><span class="line">        ]),</span><br><span class="line">        // 计算动画时间</span><br><span class="line">        <span class="function"><span class="title">timerFun</span></span> () &#123;</span><br><span class="line">            <span class="keyword">if</span>(this.isAnimation) &#123;</span><br><span class="line">                setTimeout(() =&gt; &#123;</span><br><span class="line">                    this.timerNum = this.timerNum + 10</span><br><span class="line">                    <span class="keyword">if</span>(this.timerNum &gt;= this.duration) &#123;</span><br><span class="line">                        this.animateState = <span class="literal">false</span>;</span><br><span class="line">                    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                        this.timerFun()</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;, 10);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        // 打开评论</span><br><span class="line">        <span class="function"><span class="title">reComment</span></span> () &#123;</span><br><span class="line">            this.setLeftMenuActive(5) </span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;style lang=<span class="string">"less"</span> scoped&gt;</span><br><span class="line">.my-svg&#123;</span><br><span class="line">    transform: rotate(135deg) scale(1.1);</span><br><span class="line">    position: relative;</span><br><span class="line">&#125;</span><br><span class="line">.trophy-icon&#123;</span><br><span class="line">    position: absolute;</span><br><span class="line">    transition: color .5s;</span><br><span class="line">&#125;</span><br><span class="line">.finish-progress-text&#123;</span><br><span class="line">    .absolutely-centered;</span><br><span class="line">    text-align: center;</span><br><span class="line">    p:nth-child(1)&#123;</span><br><span class="line">        color: rgba(255, 255, 255, .3);</span><br><span class="line">        font-size: 16px;</span><br><span class="line">    &#125;</span><br><span class="line">    p:nth-child(2)&#123;</span><br><span class="line">        font-size: 34px;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">.comment-btn&#123;</span><br><span class="line">    text-align: center;</span><br><span class="line">    margin-top: -20px;</span><br><span class="line">    .star-wrap&#123;</span><br><span class="line">        color: @error;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>直接做了vue组件进行引入</p>
+<p>记录下。。。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">移动端</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">svg</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/移动端//" class="article-tag-list-link color4">移动端</a>
+        			<a href="/categories/渐变弧形进度条//" class="article-tag-list-link color3">渐变弧形进度条</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/03/30/svg-flag/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2019/12/10/page20191210/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ios中iframe嵌套单页面出现白屏问题</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -231,8 +350,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

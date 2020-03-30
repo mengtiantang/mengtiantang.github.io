@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>ios中iframe嵌套单页面出现白屏问题 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="昨天项目部说有客户反馈iPhoneX上使用iframe嵌套我们的前端页面跳转时出现白屏，于是我开始了定位bug的过程。发现页面跳转之后的iframe里的ducoment的高度为0，但是我已经在被嵌套页面中定义了html和body的高度是100%，在页面里100%高度没起作用。于是想在被嵌套的页面给html和body定义一个固定值试试。通过 1document.body.style.height =">
+  <meta name="description" content="昨天项目部说有客户反馈iPhoneX上使用iframe嵌套我们的前端页面跳转时出现白屏，于是我开始了定位bug的过程。发现页面跳转之后的iframe里的ducoment的高度为0，但是我已经在被嵌套页面中定义了html和body的高度是100%，在页面里100%高度没起作用。于是想在被嵌套的页面给html和body定义一个固定值试试。">
 <meta name="keywords" content="移动端">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ios中iframe嵌套单页面出现白屏问题">
 <meta property="og:url" content="http://yoursite.com/2019/12/10/page20191210/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="昨天项目部说有客户反馈iPhoneX上使用iframe嵌套我们的前端页面跳转时出现白屏，于是我开始了定位bug的过程。发现页面跳转之后的iframe里的ducoment的高度为0，但是我已经在被嵌套页面中定义了html和body的高度是100%，在页面里100%高度没起作用。于是想在被嵌套的页面给html和body定义一个固定值试试。通过 1document.body.style.height =">
+<meta property="og:description" content="昨天项目部说有客户反馈iPhoneX上使用iframe嵌套我们的前端页面跳转时出现白屏，于是我开始了定位bug的过程。发现页面跳转之后的iframe里的ducoment的高度为0，但是我已经在被嵌套页面中定义了html和body的高度是100%，在页面里100%高度没起作用。于是想在被嵌套的页面给html和body定义一个固定值试试。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-12-10T07:07:44.804Z">
+<meta property="og:updated_time" content="2020-03-30T09:08:27.741Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ios中iframe嵌套单页面出现白屏问题">
-<meta name="twitter:description" content="昨天项目部说有客户反馈iPhoneX上使用iframe嵌套我们的前端页面跳转时出现白屏，于是我开始了定位bug的过程。发现页面跳转之后的iframe里的ducoment的高度为0，但是我已经在被嵌套页面中定义了html和body的高度是100%，在页面里100%高度没起作用。于是想在被嵌套的页面给html和body定义一个固定值试试。通过 1document.body.style.height =">
+<meta name="twitter:description" content="昨天项目部说有客户反馈iPhoneX上使用iframe嵌套我们的前端页面跳转时出现白屏，于是我开始了定位bug的过程。发现页面跳转之后的iframe里的ducoment的高度为0，但是我已经在被嵌套页面中定义了html和body的高度是100%，在页面里100%高度没起作用。于是想在被嵌套的页面给html和body定义一个固定值试试。">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -169,7 +169,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>昨天项目部说有客户反馈iPhoneX上使用iframe嵌套我们的前端页面跳转时出现白屏，于是我开始了定位bug的过程。<br>发现页面跳转之后的iframe里的ducoment的高度为0，但是我已经在被嵌套页面中定义了html和body的高度是100%，在页面里100%高度没起作用。<br>于是想在被嵌套的页面给html和body定义一个固定值试试。<br>通过</p>
+        <p>昨天项目部说有客户反馈iPhoneX上使用iframe嵌套我们的前端页面跳转时出现白屏，于是我开始了定位bug的过程。<br>发现页面跳转之后的iframe里的ducoment的高度为0，但是我已经在被嵌套页面中定义了html和body的高度是100%，在页面里100%高度没起作用。<br>于是想在被嵌套的页面给html和body定义一个固定值试试。<a id="more"></a><br>通过</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.body.style.height = window.innerHeight</span><br></pre></td></tr></table></figure>
 
 <p>发现作用不大。😡</p>
@@ -303,6 +303,15 @@
   
 <nav id="article-nav">
   
+    <a href="/2020/03/30/svg-flag/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          svg flag
+        
+      </div>
+    </a>
+  
   
     <a href="/2019/09/27/my-first-blog/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">第一篇博客</div>
@@ -348,7 +357,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2019 许得飞
+    		&copy; 2020 许得飞
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -431,15 +440,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">移动端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">最新</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">开篇</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">移动端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">svg</a>
               </li>
             
             <div class="clearfix"></div>

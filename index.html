@@ -146,6 +146,93 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-svg-flag" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/30/svg-flag/">svg flag</a>
+    </h1>
+  
+
+        
+        <a href="/2020/03/30/svg-flag/" class="archive-article-date">
+  	<time datetime="2020-03-30T09:07:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>公司需要一个渐变弧形进度条来展示数据进度。<br>在网上左拼右凑补充知识…<br>选择了用svg来实现。</p>
+        
+          <a class="article-more-a" href="/2020/03/30/svg-flag/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">svg</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/渐变弧形进度条//" class="article-tag-list-link color3">渐变弧形进度条</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/03/30/svg-flag/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-page20191210" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -166,26 +253,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>昨天项目部说有客户反馈iPhoneX上使用iframe嵌套我们的前端页面跳转时出现白屏，于是我开始了定位bug的过程。<br>发现页面跳转之后的iframe里的ducoment的高度为0，但是我已经在被嵌套页面中定义了html和body的高度是100%，在页面里100%高度没起作用。<br>于是想在被嵌套的页面给html和body定义一个固定值试试。<br>通过</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.body.style.height = window.innerHeight</span><br></pre></td></tr></table></figure>
-
-<p>发现作用不大。😡</p>
-<p>觉得分析错了，又在路由的跳转页面加上这行代码</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.body.scrollTop=document.documentElement.scrollTop=0</span><br></pre></td></tr></table></figure>
-
-<p>发现问题终于解决！！！😀</p>
-<p>发现iframe高度问题的原因是通过mac链接iPhone手机，通过元素检查看到的。<br>mac链接iphone方法</p>
-<ol>
-<li><p>在iOS设备上打开允许调试：设置→Safari→高级→打开”web检查器“</p>
-</li>
-<li><p>在MAC上打开Safari的开发菜单：顶部菜单栏“Safari”→偏好设置→高级→打开”在菜单栏中显示“开发”菜单</p>
-</li>
-<li><p>在iOS设备上的Safari浏览器中打开要调试的页面，然后切换到MAC的Safari，在顶部菜单栏选择“开发”→找到你的iOS设备名称→右边二级菜单选择需要调试的对应标签页，即可开始远程调试</p>
-</li>
-<li><p>如果没有iOS设备，也可以在Xcode中模拟一台，点击顶部“Xcode”→“Open Developer Tool”→“iOS Simulator”即可打开一个iOS设备的模拟器，并且模拟器里面Safari打开的页面，也是能通过上个步骤中MAC上的Safari调试。</p>
-</li>
-</ol>
-
+        <p>昨天项目部说有客户反馈iPhoneX上使用iframe嵌套我们的前端页面跳转时出现白屏，于是我开始了定位bug的过程。<br>发现页面跳转之后的iframe里的ducoment的高度为0，但是我已经在被嵌套页面中定义了html和body的高度是100%，在页面里100%高度没起作用。<br>于是想在被嵌套的页面给html和body定义一个固定值试试。
+        
+          <a class="article-more-a" href="/2019/12/10/page20191210/#more">more >></a>
+        
       
 
       
@@ -356,7 +427,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2019 许得飞
+    		&copy; 2020 许得飞
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -439,15 +510,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">移动端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">最新</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">开篇</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">移动端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">svg</a>
               </li>
             
             <div class="clearfix"></div>
