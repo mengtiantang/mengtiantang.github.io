@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019 | Hexo</title>
+  <title>基于vue实现移动端轮播图组件 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2019/index.html">
+  <meta name="description" content="最近有需要搭建私有组件库，需要个轮播组件自己查阅资料尝试使用jsx实现基础版轮播组件（有待完善），顺便记录下使用的jsx语法 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273">
+<meta name="keywords" content="移动端轮播,vue">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基于vue实现移动端轮播图组件">
+<meta property="og:url" content="http://yoursite.com/2020/08/24/基于vue实现移动端轮播图组件/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="最近有需要搭建私有组件库，需要个轮播组件自己查阅资料尝试使用jsx实现基础版轮播组件（有待完善），顺便记录下使用的jsx语法 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-08-24T10:14:42.408Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="基于vue实现移动端轮播图组件">
+<meta name="twitter:description" content="最近有需要搭建私有组件库，需要个轮播组件自己查阅资料尝试使用jsx实现基础版轮播组件（有待完善），顺便记录下使用的jsx语法 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -144,124 +149,173 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-基于vue实现移动端轮播图组件" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/10/page20191210/" class="archive-article-date">
-  	<time datetime="2019-12-10T06:45:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-10</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/10/page20191210/">ios中iframe嵌套单页面出现白屏问题</a>
+    <h1 class="article-title" itemprop="name">
+      基于vue实现移动端轮播图组件
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2020/08/24/基于vue实现移动端轮播图组件/" class="archive-article-date">
+  	<time datetime="2020-08-24T10:10:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近有需要搭建私有组件库，需要个轮播组件<br>自己查阅资料尝试使用jsx实现基础版轮播组件（有待完善），顺便记录下使用的jsx语法</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">const Swipter = &#123;</span><br><span class="line">    props: &#123;</span><br><span class="line">        dots: &#123;</span><br><span class="line">            <span class="built_in">type</span>: Boolean,</span><br><span class="line">            default: <span class="literal">true</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="function"><span class="title">data</span></span> () &#123;</span><br><span class="line">        <span class="built_in">return</span> &#123;</span><br><span class="line">            slideTranslat: 0,      // 轮播平移</span><br><span class="line">            activeIndex: 0,        // 当前轮播图的索引</span><br><span class="line">            bannerwidth: 0,        // 轮播图宽度</span><br><span class="line">            StartPoint: 0,         // 触摸开始的点的横坐标</span><br><span class="line">            EndPoint: 0,           // 触摸结束的点的横坐标</span><br><span class="line">            MoveLength: 0,         // StartPoint与EndPoint的差值       </span><br><span class="line">            isPlaying: <span class="literal">true</span>,       // 判断是否处于自动轮播</span><br><span class="line">            playTimer: null        // 轮播定时器</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    computed: &#123;</span><br><span class="line">        <span class="function"><span class="title">slickTrack</span></span> () &#123;</span><br><span class="line">            const scopeSlotChild = this.<span class="variable">$slots</span>[<span class="string">'default'</span>]</span><br><span class="line">            <span class="built_in">return</span> &#123;</span><br><span class="line">                width: `<span class="variable">$&#123;scopeSlotChild.length*100&#125;</span>%`,</span><br><span class="line">                transform: `translateX(<span class="variable">$&#123;this.slideTranslat&#125;</span>px)`</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    methods: &#123;</span><br><span class="line">        // 传参演示</span><br><span class="line">        ceshi(num) &#123;</span><br><span class="line">            console.log(num, <span class="string">'1111111'</span>)</span><br><span class="line">        &#125;,</span><br><span class="line">        // 拖拽开始</span><br><span class="line">        TouchStart(event) &#123;</span><br><span class="line">            // console.log(<span class="string">'拖拽开始....'</span>)</span><br><span class="line">            // 清除定时器</span><br><span class="line">            clearInterval(this.playTimer)</span><br><span class="line">            // 获取触摸的开始点</span><br><span class="line">            this.StartPoint = event.changedTouches[0].pageX</span><br><span class="line">        &#125;,</span><br><span class="line">        // 拖拽中</span><br><span class="line">        TouchMove(event) &#123;</span><br><span class="line">            // console.log(<span class="string">'拖拽中....'</span>)</span><br><span class="line">            // 获取触摸的结束点</span><br><span class="line">            this.EndPoint = event.changedTouches[0].pageX</span><br><span class="line">            this.bannerwidth = this.<span class="variable">$refs</span>.carousel.offsetWidth</span><br><span class="line">            this.slideTranslat = -this.bannerwidth*this.activeIndex+this.EndPoint - this.StartPoint</span><br><span class="line">        &#125;,</span><br><span class="line">        // 拖拽结束</span><br><span class="line">        <span class="function"><span class="title">TouchEnd</span></span>() &#123;</span><br><span class="line">            // console.log(<span class="string">'拖拽结束....'</span>)</span><br><span class="line">            this.Jump()</span><br><span class="line">            //开始轮播</span><br><span class="line">            // this.startPlay()</span><br><span class="line">        &#125;,</span><br><span class="line">        //Jump()方法用于处理滑动到一定程度后松手自动跳转到下一页或上一页</span><br><span class="line">        <span class="function"><span class="title">Jump</span></span>()&#123;</span><br><span class="line">            this.bannerwidth = this.<span class="variable">$refs</span>.carousel.offsetWidth</span><br><span class="line">            const scopeSlotChild = this.<span class="variable">$slots</span>[<span class="string">'default'</span>].length</span><br><span class="line">            <span class="keyword">if</span>( Math.abs(this.EndPoint - this.StartPoint) &gt; this.bannerwidth * 0.35) &#123;</span><br><span class="line">                <span class="keyword">if</span>(this.EndPoint - this.StartPoint &gt; 0) &#123;</span><br><span class="line">                    <span class="keyword">if</span>(this.activeIndex === 0) &#123;</span><br><span class="line">                        this.activeIndex = scopeSlotChild-1</span><br><span class="line">                    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                        this.activeIndex --</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    <span class="keyword">if</span>(this.activeIndex &gt; scopeSlotChild - 2) &#123;</span><br><span class="line">                        this.activeIndex = 0</span><br><span class="line">                    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                        this.activeIndex ++</span><br><span class="line">                    &#125;</span><br><span class="line">                    </span><br><span class="line">                &#125;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                // this.slideTranslat = -this.bannerwidth*this.activeIndex</span><br><span class="line">            &#125;</span><br><span class="line">            this.animation()</span><br><span class="line">        &#125;,</span><br><span class="line">        // 轮播动画</span><br><span class="line">        animation(linerNum = 1) &#123;</span><br><span class="line">            const needLength = -this.bannerwidth*this.activeIndex</span><br><span class="line">            const newDistance = Math.abs(this.slideTranslat - needLength)</span><br><span class="line">            newDistance &gt; 20 ? linerNum+=2 : linerNum - 2 &gt; 0 ? linerNum -= 2 : 1</span><br><span class="line">            <span class="keyword">if</span>(this.slideTranslat &lt; needLength) &#123;</span><br><span class="line">                this.slideTranslat = this.slideTranslat + linerNum &gt; needLength ? needLength : this.slideTranslat + linerNum</span><br><span class="line">                requestAnimationFrame(() =&gt; this.animation(linerNum))</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (this.slideTranslat &gt; needLength) &#123;</span><br><span class="line">                this.slideTranslat = this.slideTranslat - linerNum &lt; needLength ? needLength : this.slideTranslat - linerNum</span><br><span class="line">                requestAnimationFrame(() =&gt; this.animation(linerNum))</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                console.log(<span class="string">'动画结束'</span>)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        //开启轮播</span><br><span class="line">        <span class="function"><span class="title">startPlay</span></span>() &#123;</span><br><span class="line">            clearInterval(this.playTimer)</span><br><span class="line">            this.playTimer = setInterval(() =&gt; &#123;</span><br><span class="line">                <span class="keyword">if</span>(this.activeIndex === 3) &#123;</span><br><span class="line">                this.activeIndex = -1</span><br><span class="line">                &#125;</span><br><span class="line">                this.activeIndex ++</span><br><span class="line">                const activeIndex = document.getElementsByClassName(<span class="string">'slick-slide'</span>)</span><br><span class="line">                this.bannerwidth = activeIndex[0].offsetWidth</span><br><span class="line">                activeIndex[0].style.marginLeft = -this.activeIndex * this.bannerwidth + <span class="string">'px'</span></span><br><span class="line">                activeIndex[0].style.transition = <span class="string">'all 1s ease'</span></span><br><span class="line">            &#125;, 3000)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="function"><span class="title">render</span></span> () &#123;</span><br><span class="line">        const &#123; ceshi, TouchStart, TouchMove, TouchEnd, activeIndex &#125; = this</span><br><span class="line">        const scopeSlotChild = this.<span class="variable">$slots</span>[<span class="string">'default'</span>]</span><br><span class="line">        <span class="built_in">return</span> (</span><br><span class="line">            &lt;div class=<span class="string">"ec_swiper"</span> onClick=&#123;() =&gt; &#123;ceshi(<span class="string">'123'</span>)&#125;&#125; ref=<span class="string">"carousel"</span>&gt;</span><br><span class="line">                &lt;div class=<span class="string">"slick-track"</span> style=&#123;this.slickTrack&#125;&gt;</span><br><span class="line">                    &#123;scopeSlotChild.map(li =&gt; &#123;</span><br><span class="line">                        <span class="built_in">return</span> &lt;div class=<span class="string">"slick-slide"</span> onTouchstart=&#123;TouchStart&#125; onTouchmove=&#123;TouchMove&#125; onTouchend=&#123;TouchEnd&#125;&gt;&#123;li&#125;&lt;/div&gt;</span><br><span class="line">                    &#125;)&#125;</span><br><span class="line">                &lt;/div&gt;</span><br><span class="line">                &lt;p class=<span class="string">"slick-dots"</span>&gt;</span><br><span class="line">                    &#123;this.dots ? scopeSlotChild.map((li, index) =&gt; &#123;</span><br><span class="line">                        <span class="built_in">return</span> &lt;span class=&#123;index === activeIndex ? <span class="string">'slick-active'</span> : <span class="string">''</span>&#125;&gt;&lt;/span&gt;</span><br><span class="line">                    &#125;) : null&#125;</span><br><span class="line">                &lt;/p&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">        )</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="function"><span class="title">beforeDestroy</span></span> () &#123;</span><br><span class="line">        clearInterval(this.playTimer)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">Swipter.install = <span class="keyword">function</span>(Vue) &#123;</span><br><span class="line">  Vue.component(Swipter.name, Swipter)</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">export</span> default Swipter</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// 参考 https://blog.csdn.net/l_ppp/article/details/105883664 轮播事件</span><br><span class="line">//      https://www.jianshu.com/p/825036a29ce8, https://www.cnblogs.com/ysla/p/11902130.html                vue 使用jsx solt使用</span><br><span class="line">//      https://segmentfault.com/a/1190000015297381?utm_source=tag-newest</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;style lang=<span class="string">"scss"</span> scoped&gt;</span><br><span class="line">.ec_swiper&#123;</span><br><span class="line">    width: 100%;</span><br><span class="line">    overflow: hidden;</span><br><span class="line">    // touch-action: pan-y;</span><br><span class="line">    position: relative;</span><br><span class="line">    .slick-track&#123;</span><br><span class="line">        display: flex;</span><br><span class="line">        align-items: center;</span><br><span class="line">        box-sizing: border-box;</span><br><span class="line">    &#125;</span><br><span class="line">    .slick-slide&#123;</span><br><span class="line">        flex: 1;</span><br><span class="line">    &#125;</span><br><span class="line">    .slick-dots&#123;</span><br><span class="line">        position: absolute;</span><br><span class="line">        bottom: 3%;</span><br><span class="line">        left: 50%;</span><br><span class="line">        transform: translateX(-50%);</span><br><span class="line">        display: flex;</span><br><span class="line">        align-items: center;</span><br><span class="line">        justify-content: center;</span><br><span class="line">        span&#123;</span><br><span class="line">            width: 16px;</span><br><span class="line">            height: 3px;</span><br><span class="line">            margin: 0 5px;</span><br><span class="line">            background: white;</span><br><span class="line">            opacity: .3;</span><br><span class="line">            transition: all .3s;</span><br><span class="line">        &#125;</span><br><span class="line">        .slick-active&#123;</span><br><span class="line">            width: 24px;</span><br><span class="line">            opacity: 1;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">移动端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/移动端//" class="article-tag-list-link color4">移动端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/27/my-first-blog/" class="archive-article-date">
-  	<time datetime="2019-09-27T08:26:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/27/my-first-blog/">第一篇博客</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">最新</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">移动端轮播</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">开篇</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/默认分类//" class="article-tag-list-link color5">默认分类</a>
-        		</li>
-      		
-		</ul>
-	</div>
+      
 
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/08/24/基于vue实现移动端轮播图组件/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2020/04/23/使用js修改scss或less变量达到换肤目的/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">使用js修改scss或less变量达到换肤目的</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -284,8 +338,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
